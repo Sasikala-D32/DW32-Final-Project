@@ -4,7 +4,6 @@ import csv
 email_regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 pwd_regex = re.compile(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{5,}$')
 
-
 def isValidEmail(email):
     if re.fullmatch(email_regex, email):
       return True
@@ -29,9 +28,7 @@ def register():
             print('\nInvalid Password')
     else:
         print('\nInvalid Username')
-
-    
-
+ 
 def login():
     email = input('EmailId: ')
     auth  = False
